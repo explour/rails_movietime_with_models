@@ -1,28 +1,25 @@
-== README
+== Getting Started
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Fork this repo and then clone it onto your computer.
 
-Things you may want to cover:
+Once it is cloned, navigate to the folder using your terminal and run:
 
-* Ruby version
+<code>
+bundle install
+</code>
 
-* System dependencies
+Next, create your database tables by running:
 
-* Configuration
+<code>
+rake db:migrate
+</code>
 
-* Database creation
+Start your Rails server:
 
-* Database initialization
+<code>
+rails server
+</code>
 
-* How to run the test suite
+== Your Mission
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The Rails application only has the required model in its current state. You will need to do add the appropriate routes, controllers, actions, and views for each of the CRUD operations for movies.
