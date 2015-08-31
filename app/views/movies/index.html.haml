@@ -1,2 +1,15 @@
-- @movies.each do |mov|
-	%p= mov.title
+#left_col
+	%h1 Rails Movietime
+	%a.button{href: "/movies/new"}Create a New Movie
+
+#right_col
+	.grid.js-masonry{ :"data-masonry-options" => '{ "itemSelector": ".grid-item", "columWidth": 200 }'}
+
+	- @movies.each do |mov|
+		%a{href: "/movies/#{mov.id.to_s}"}
+			.movie.grid-item
+				%img{href: ""}
+				%br/
+				%p= mov.title
+				%p Directed By #{mov.director.to_s}
+				%p Rating: #{mov.rating.to_s} stars

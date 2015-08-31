@@ -1,1 +1,17 @@
-= @movie.title
+
+#left_col
+	%h1 Rails Movietime
+	%a.button{href: "/movies"}Back to all movies
+
+#right_col
+	%img.full_img{href: ""}
+	#info_col
+		%h1= @movie.title
+		%p Directed by: #{@movie.director}
+		%p Rating: #{@movie.rating} stars
+
+		= form_tag("/movies/#{@movie.id}/edit", method: "get") do 
+			= button_tag("Edit")
+
+		= form_tag("/movies/#{@movie.id}", method: "delete") do 
+			= button_tag("Delete")
